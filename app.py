@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from model import recommend
 
-movies = pd.read_csv("movies.csv")
+movies = pd.read_csv("dataset/movies.csv")
 
 st.title("Movie Recommendation System")
 
@@ -20,4 +20,5 @@ if st.button("Recommend"):
     for movie in recommendations:
 
         st.write(movie)
+
 
