@@ -1,25 +1,14 @@
 import streamlit as st
-import pandas as pd
 from model import recommend
 
-movies = pd.read_csv("movies.csv")
+genres = ["Action","Comedy","Sci-Fi","Romance","Thriller"]
 
 st.title("Movie Recommendation System")
 
-selected_movie = st.selectbox(
-    "Select a Movie",
-    movies["title"].values
-)
+genre = st.selectbox("Choose a Genre", genres)
 
 if st.button("Recommend"):
+    results = recommend(genre)
 
-    recommendations = recommend(selected_movie)
-
-    st.write("Recommended Movies:")
-
-    for movie in recommendations:
-
+    for movie in results:
         st.write(movie)
-
-
-
