@@ -1,7 +1,7 @@
 import streamlit as st
 from model import recommend
 
-genres = ["Action","Comedy","Sci-Fi","Romance","Thriller"]
+genres = ["Action","Comedy","Sci-Fi","Romance","Thriller","Horror"]
 
 st.title("Movie Recommendation System")
 
@@ -12,3 +12,4 @@ if st.button("Recommend"):
 
     for movie in results:
         st.write(movie)
+
