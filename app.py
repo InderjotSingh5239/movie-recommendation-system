@@ -115,4 +115,4 @@ if st.sidebar.button("🎯 Recommend Movies"):
 # FOOTER
 # -----------------------------
 st.markdown("---")
-st.markdown("<p style='text-align:center;'>Made by Inderjot Singh 🚀</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align:center;'>Made by Inderjot Singh </p>", unsafe_allow_html=True)
